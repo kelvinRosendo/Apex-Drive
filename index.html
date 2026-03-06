@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX DRIVE — Carros de Luxo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Bebas+Neue&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- CURSOR -->
+    <div class="cursor"         id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <a href="#hero" class="logo">APEX<span>·</span>DRIVE</a>
+        <div class="menu">
+            <a href="#carros">Frota</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+            <a href="#contato" class="btn-nav">Reservar</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-line"></div>
+
+        <div class="hero-content">
+            <div class="hero-eyebrow">Locação de Veículos de Alto Padrão</div>
+            <h1>Dirija o<br><span>Extraordinário</span></h1>
+            <p class="hero-sub">Acesso exclusivo aos automóveis mais desejados do mundo. Uma experiência que transcende o ordinário.</p>
+            <div class="hero-actions">
+                <a href="#carros" class="btn"><span>Ver Frota</span></a>
+                <a href="#sobre"  class="btn-ghost">Nossa História</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-bar"></div>
+            Scroll
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <div class="stat-num"><span data-count="24" data-suffix="+">0+</span></div>
+                <div class="stat-lbl">Veículos Premium</div>
+            </div>
+            <div>
+                <div class="stat-num"><span data-count="8" data-suffix="K">0K</span></div>
+                <div class="stat-lbl">Clientes Satisfeitos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>FERRARI</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>LAMBORGHINI</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>ROLLS-ROYCE</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>BENTLEY</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>BUGATTI</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>MCLAREN</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>ASTON MARTIN</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>PORSCHE</span>
+            <!-- duplicado para loop infinito -->
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>FERRARI</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>LAMBORGHINI</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>ROLLS-ROYCE</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>BENTLEY</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>BUGATTI</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>MCLAREN</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>ASTON MARTIN</span>
+            <span class="marquee-item"><i class="fas fa-circle-dot"></i>PORSCHE</span>
+        </div>
+    </div>
+
+    <!-- CARROS -->
+    <section id="carros">
+        <div class="section-header">
+            <div>
+                <div class="section-eyebrow reveal">Frota Exclusiva</div>
+                <h2 class="reveal rd1">Nossos <em>Veículos</em><br>Disponíveis</h2>
+            </div>
+            <div class="cars-nav reveal rd2">
+                <button class="arrow" onclick="changeSlide(-1)" aria-label="Anterior">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button class="arrow" onclick="changeSlide(1)" aria-label="Próximo">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="carousel reveal rd2">
+            <div class="track" id="track">
+
+                <!-- CARD 1 -->
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg?auto=compress&cs=tinysrgb&w=900"
+                             alt="Ferrari SF90 Stradale"
+                             onerror="this.closest('.card-img-wrap').innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:rgba(200,16,46,.5);font-family:Bebas Neue,sans-serif;font-size:18px;letter-spacing:3px;background:#1a0a0a\'>&#9670;<br>FERRARI SF90</div>'" />
+                        <div class="card-badge">Mais Pedido</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Ferrari</div>
+                        <div class="card-name">SF90 Stradale</div>
+                        <div class="card-desc">Híbrido plug-in mais poderoso da Ferrari. V8 biturbo + 3 motores elétricos entregam 1.000 cv de pura adrenalina italiana.</div>
+                        <div class="card-specs">
+                            <div><div class="spec-v">1.000</div><div class="spec-l">CV</div></div>
+                            <div><div class="spec-v">2,5s</div><div class="spec-l">0–100</div></div>
+                            <div><div class="spec-v">340</div><div class="spec-l">km/h Máx</div></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <div class="price-lbl">A partir de</div>
+                                <div class="price">R$18.500<sub>/dia</sub></div>
+                            </div>
+                            <a href="#contato" class="btn-card">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.pexels.com/photos/18413128/pexels-photo-18413128.jpeg?auto=compress&cs=tinysrgb&w=900"
+                             alt="Lamborghini Huracán Tecnica"
+                             onerror="this.closest('.card-img-wrap').innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:rgba(200,16,46,.5);font-family:Bebas Neue,sans-serif;font-size:18px;letter-spacing:3px;background:#1a0a0a\'>&#9670;<br>LAMBORGHINI HURACÁN</div>'" />
+                        <div class="card-badge">Exclusivo</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Lamborghini</div>
+                        <div class="card-name">Huracán Tecnica</div>
+                        <div class="card-desc">V10 aspirado de 640 cv — uma experiência sonora e dinâmica sem igual. Puramente analógica, puramente visceral.</div>
+                        <div class="card-specs">
+                            <div><div class="spec-v">640</div><div class="spec-l">CV</div></div>
+                            <div><div class="spec-v">3,2s</div><div class="spec-l">0–100</div></div>
+                            <div><div class="spec-v">325</div><div class="spec-l">km/h Máx</div></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <div class="price-lbl">A partir de</div>
+                                <div class="price">R$14.200<sub>/dia</sub></div>
+                            </div>
+                            <a href="#contato" class="btn-card">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.pexels.com/photos/19273958/pexels-photo-19273958.jpeg?auto=compress&cs=tinysrgb&w=900"
+                             alt="Rolls-Royce Spectre"
+                             onerror="this.closest('.card-img-wrap').innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:rgba(200,16,46,.5);font-family:Bebas Neue,sans-serif;font-size:18px;letter-spacing:3px;background:#1a0a0a\'>&#9670;<br>ROLLS-ROYCE SPECTRE</div>'" />
+                        <div class="card-badge">Grand Luxo</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Rolls-Royce</div>
+                        <div class="card-name">Spectre</div>
+                        <div class="card-desc">O primeiro elétrico da Rolls-Royce. Silêncio e opulência em estado puro, com interior em couro Nappa artesanal exclusivo.</div>
+                        <div class="card-specs">
+                            <div><div class="spec-v">585</div><div class="spec-l">CV</div></div>
+                            <div><div class="spec-v">4,5s</div><div class="spec-l">0–100</div></div>
+                            <div><div class="spec-v">250</div><div class="spec-l">km/h Máx</div></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <div class="price-lbl">A partir de</div>
+                                <div class="price">R$22.000<sub>/dia</sub></div>
+                            </div>
+                            <a href="#contato" class="btn-card">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.pexels.com/photos/207268/pexels-photo-207268.jpeg?auto=compress&cs=tinysrgb&w=900"
+                             alt="Bugatti Chiron Sport"
+                             onerror="this.closest('.card-img-wrap').innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:rgba(200,16,46,.5);font-family:Bebas Neue,sans-serif;font-size:18px;letter-spacing:3px;background:#1a0a0a\'>&#9670;<br>BUGATTI CHIRON</div>'" />
+                        <div class="card-badge">Ultra Rare</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Bugatti</div>
+                        <div class="card-name">Chiron Sport</div>
+                        <div class="card-desc">W16 quad-turbo de 1.500 cv. Uma declaração de guerra às leis da física. Uma experiência reservada a pouquíssimos.</div>
+                        <div class="card-specs">
+                            <div><div class="spec-v">1.500</div><div class="spec-l">CV</div></div>
+                            <div><div class="spec-v">2,4s</div><div class="spec-l">0–100</div></div>
+                            <div><div class="spec-v">420</div><div class="spec-l">km/h Máx</div></div>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <div class="price-lbl">A partir de</div>
+                                <div class="price">R$45.000<sub>/dia</sub></div>
+                            </div>
+                            <a href="#contato" class="btn-card">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="dots">
+            <div class="dot active" onclick="goToSlide(0)"></div>
+            <div class="dot"        onclick="goToSlide(1)"></div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <div class="sobre-grid">
+            <div class="sobre-img-wrap reveal">
+                <img src="https://images.pexels.com/photos/1164778/pexels-photo-1164778.jpeg?auto=compress&cs=tinysrgb&w=700"
+                     alt="Showroom APEX DRIVE"
+                     onerror="this.style.display='none'" />
+                <div class="sobre-accent"></div>
+                <div class="sobre-badge">
+                    <div class="sobre-badge-num">12</div>
+                    <div class="sobre-badge-lbl">Anos de Excelência</div>
+                </div>
+            </div>
+            <div class="sobre-content">
+                <div class="section-eyebrow reveal">Quem Somos</div>
+                <h2 class="reveal rd1">Redefinindo o<br><em>Padrão</em> do Luxo</h2>
+                <p class="reveal rd2">Na APEX DRIVE, cada detalhe é meticulosamente cuidado para garantir que sua experiência com nossos veículos seja absolutamente inesquecível. Frota renovada, atendimento exclusivo e suporte 24h.</p>
+                <div class="features-grid reveal rd3">
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="feature-title">Seguro Total</div>
+                        <div class="feature-text">Cobertura completa inclusa em todas as locações</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-location-arrow"></i></div>
+                        <div class="feature-title">Entrega VIP</div>
+                        <div class="feature-text">O carro chega até você, onde estiver</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                        <div class="feature-title">Suporte 24/7</div>
+                        <div class="feature-text">Concierge dedicado sempre disponível</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-star"></i></div>
+                        <div class="feature-title">Experiência Única</div>
+                        <div class="feature-text">Personalização completa da sua jornada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <div class="contato-grid">
+            <div class="contato-info">
+                <div class="section-eyebrow reveal">Fale Conosco</div>
+                <h2 class="reveal rd1">Sua Próxima<br><em>Experiência</em><br>Começa Aqui</h2>
+                <p class="reveal rd2">Nossa equipe está pronta para criar a experiência de locação perfeita para você.</p>
+                <div class="contact-items reveal rd3">
+                    <div class="contact-item">
+                        <div class="c-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <div class="c-lbl">Telefone</div>
+                            <div class="c-val">+55 (11) 9 9999-0001</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="c-lbl">E-mail</div>
+                            <div class="c-val">reservas@apexdrive.com.br</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="c-icon"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <div class="c-lbl">Endereço</div>
+                            <div class="c-val">Av. Brigadeiro Faria Lima, 3477 — São Paulo, SP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal rd2">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Nome</label>
+                        <input type="text" id="f-name" placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Sobrenome</label>
+                        <input type="text" placeholder="Seu sobrenome">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">E-mail</label>
+                    <input type="email" id="f-email" placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Veículo de Interesse</label>
+                    <select id="f-car">
+                        <option value="">Selecione um veículo</option>
+                        <option>Ferrari SF90 Stradale — R$18.500/dia</option>
+                        <option>Lamborghini Huracán Tecnica — R$14.200/dia</option>
+                        <option>Rolls-Royce Spectre — R$22.000/dia</option>
+                        <option>Bugatti Chiron Sport — R$45.000/dia</option>
+                        <option>Outro (consultar disponibilidade)</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Retirada</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Devolução</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mensagem (opcional)</label>
+                    <textarea placeholder="Requisitos especiais, local de entrega…"></textarea>
+                </div>
+                <button class="btn-submit" onclick="submitForm()"><span>Solicitar Reserva</span></button>
+                <div class="form-success" id="formSuccess">
+                    <i class="fas fa-check-circle" style="color:var(--red);font-size:24px;display:block;margin-bottom:8px"></i>
+                    Solicitação recebida! Entraremos em contato em até 2 horas.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">APEX<span>·</span>DRIVE</div>
+        <div class="footer-socials">
+            <a href="#" class="soc"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="soc"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="soc"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="footer-copy">© 2025 APEX DRIVE. Todos os direitos reservados.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
